@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks Manager App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body class="">
+    <div id="fixedArea">
+      <header class="header">
+        <div class="header-left">
+          <p>Task App</p>
+          <i id="switch-theme" class="fa fa-moon"></i>
+        </div>
+        <div class="header-right">
+          <p id="time"></p>
+        </div>
+      </header>
+      <div class="input-container">
+        <input type="text" placeholder="add Task" id="add-task-input" />
+        <span class="error"></span>
+        <button id="add-task-btn" class="add-task-btn">Add Task</button>
+      </div>
+    </div>
+    <div class="tasks-container">
+      <p id="intro">Add a task and do it :)</p>
+      <div class="tasks-reverse">
+        <!-- tasks -->
+      </div>
+      <audio src="./assets/cheked.mp3"></audio>
+    </div>
+  </body>
+</html>

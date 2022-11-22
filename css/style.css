@@ -1,0 +1,252 @@
+:root {
+  --whiteColor: #f6f6f6;
+  --blackColor: #1b2430;
+}
+
+@font-face {
+  font-family: vazir;
+  src: url("../assets/fonts/Vazir.ttf");
+}
+
+body {
+  margin: 0;
+  background-color: var(--whiteColor);
+  font-family: vazir;
+  /* overflow-y: hidden; */
+}
+
+.tasks-container::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+.tasks-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.tasks-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.fixed{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.header {
+  display: flex;
+  background: #1f4690;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px 0 20px;
+  height: 50px;
+  color: var(--whiteColor);
+
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-left i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.header-left p {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  padding: 10px 0 0px 0;
+  background-color: var(--whiteColor)
+}
+
+.input-container input {
+  background-color: #fff;
+  width: 90vw;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 17px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+  font-family: vazir;
+}
+
+.input-container button {
+  width: 91vw;
+  height: 40px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border: 1px solid #1f4690;
+  font-size: 20px;
+  border-radius: 1px;
+  color: #1f4690;
+  transition: 0.5s ease;
+  display: none;
+}
+.input-container button:hover {
+  cursor: pointer;
+  background-color: #1f4690;
+  color: #fff;
+  border: none;
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50%;
+}
+
+
+
+.task-card {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  margin: 10px 0 10px 0;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  z-index: 0;
+  transition: 0.5s ease;
+}
+
+.card-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 95%;
+}
+
+.check-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.check-container input {
+  width: 20px;
+  height: 20px;
+}
+
+.task-content-container {
+  word-wrap: break-word;
+  width: 95%;
+  line-height: 35px;
+}
+
+.card-right {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.card-right i {
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.card-right i:hover {
+  color: red;
+}
+
+.is-complete-task {
+  text-decoration: line-through;
+  color: rgb(105, 105, 105);
+  text-decoration-color: #000;
+  text-decoration-style: solid;
+}
+
+.tasks-reverse {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  display: none;
+  align-self: center;
+  width: 90vw;
+  color: red;
+}
+
+.dark {
+  
+  background-color: var(--blackColor);
+}
+
+.dark .tasks-container {
+  background-color: var(--blackColor);
+}
+.dark .input-container {
+  background-color: var(--blackColor);
+}
+.dark .input-container input {
+  background-color: var(--blackColor);
+  border: 1px solid var(--whiteColor);
+  color: var(--whiteColor);
+}
+
+.dark .input-container button {
+  border: 1px solid var(--whiteColor);
+  color: var(--whiteColor);
+}
+.dark .input-container button:hover{
+  border: none;
+  color: var(--whiteColor);
+}
+
+.dark .input-container {
+  background-color: var(--blackColor);
+}
+
+.dark .tasks-container::-webkit-scrollbar-track {
+  background: var(--blackColor);
+}
+
+/* Handle */
+.dark .tasks-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.dark .task-card {
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  border: 1px solid var(--whiteColor);
+}
+
+.dark .is-complete-task{
+  text-decoration: line-through;
+  color: rgb(214, 214, 214);
+  text-decoration-color: #000;
+  text-decoration-style: solid;
+}
+
+#switch-theme{
+  font-size: 23px;
+  color: #fff;
+}
+
+#intro{
+  display: none;
+}
+.dark #intro{
+  color: #fff;
+}
